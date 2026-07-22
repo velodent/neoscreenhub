@@ -1,61 +1,93 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download - NeoScreenHub</title>
-    <style>
-        body { 
-            font-family: 'Segoe UI', Arial, sans-serif; 
-            background: #f8f9fa; 
-            color: #333; 
-            text-align: center; 
-            padding: 80px 20px; 
-        }
-        .container { max-width: 600px; margin: 0 auto; }
-        h1 { color: #667eea; }
-        input {
-            padding: 12px;
-            font-size: 1.1rem;
-            width: 300px;
-            margin: 20px;
-        }
-        button {
-            padding: 12px 30px;
-            font-size: 1.1rem;
-            background: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scarica NeoScreenHub</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', Arial, sans-serif; 
+      background: #0f172a; 
+      color: #e2e8f0; 
+      text-align: center; 
+      padding: 80px 20px; 
+      margin: 0;
+    }
+    .container { max-width: 700px; margin: 0 auto; }
+    h1 { color: #60a5fa; font-size: 2.8rem; margin-bottom: 20px; }
+    p { font-size: 1.25rem; margin-bottom: 40px; color: #94a3b8; }
+    input {
+      padding: 14px;
+      font-size: 1.1rem;
+      width: 320px;
+      border: 1px solid #334155;
+      background: #1e2937;
+      color: white;
+      border-radius: 8px;
+    }
+    button {
+      padding: 16px 40px;
+      font-size: 1.3rem;
+      background: #22c55e;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    #status {
+      margin-top: 20px;
+      color: #94a3b8;
+      font-size: 1rem;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>NeoScreenHub</h1>
-        <p>Inserisci la password per scaricare l'ultima versione</p>
-        
-        <input type="password" id="pass" placeholder="Inserisci password">
-        <br><br>
-        <button onclick="checkPassword()">⬇️ Scarica l'ultima versione</button>
-        
-        <p style="margin-top: 40px;">
-            <a href="index.html">← Torna alla Home</a>
-        </p>
-    </div>
+  <div class="container">
+    <h1>NeoScreenHub</h1>
+    <p>Inserisci la password per scaricare l'ultima versione</p>
+    
+    <input type="password" id="pass" placeholder="Inserisci password">
+    <br><br>
+    <button onclick="checkPassword()">⬇️ Scarica l'ultima versione</button>
+    
+    <p id="status">Ricerca ultima release...</p>
+    
+    <p style="margin-top: 40px;">
+      <a href="index.html" style="color: #60a5fa;">← Torna alla Home</a>
+    </p>
+  </div>
 
-    <script>
-        function checkPassword() {
-            const password = document.getElementById("pass").value;
-            
-            if (password === "12345678") {   // ← Cambia qui
-                // Questo link scarica automaticamente l'ultimo asset della release
-                window.location.href = "https://github.com/velodent/neoscreenhub/releases/latest/download/NeoScreenHub-Setup.exe";
-            } else {
-                alert("Password errata!");
-            }
+  <script>
+    let downloadUrl = "";
+
+    // Recupera automaticamente l'ultimo .exe dalla release
+    fetch("https://api.github.com/repos/velodent/neoscreenhub/releases/latest")
+      .then(response => response.json())
+      .then(release => {
+        const asset = release.assets.find(a => a.name.toLowerCase().endsWith('.exe'));
+        if (asset) {
+          downloadUrl = asset.browser_download_url;
+          document.getElementById("status").textContent = `Trovato: ${release.tag_name} - Pronto al download`;
+        } else {
+          document.getElementById("status").textContent = "Nessun file .exe trovato";
         }
-    </script>
+      })
+      .catch(() => {
+        document.getElementById("status").textContent = "Errore di connessione";
+      });
+
+    function checkPassword() {
+      if (document.getElementById("pass").value === "12345678") {
+        if (downloadUrl) {
+          window.location.href = downloadUrl;
+        } else {
+          alert("File non ancora pronto. Riprova tra qualche secondo.");
+        }
+      } else {
+        alert("Password errata!");
+      }
+    }
+  </script>
 </body>
 </html>
