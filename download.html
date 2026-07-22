@@ -11,49 +11,50 @@
             color: #333; 
             text-align: center; 
             padding: 80px 20px; 
-            margin: 0;
         }
-        .container { 
-            max-width: 700px; 
-            margin: 0 auto; 
-        }
-        h1 { 
-            color: #667eea; 
-            margin-bottom: 20px;
-        }
-        p { 
-            font-size: 1.3rem; 
-            margin-bottom: 40px;
-        }
-        .btn {
-            display: inline-block;
+        .container { max-width: 600px; margin: 0 auto; }
+        h1 { color: #667eea; }
+        input {
+            padding: 12px;
+            font-size: 1.1rem;
+            width: 300px;
             margin: 20px;
-            padding: 20px 50px;
+        }
+        button {
+            padding: 12px 30px;
+            font-size: 1.1rem;
             background: #28a745;
             color: white;
-            font-size: 1.5rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-        .btn:hover {
-            background: #218838;
-            transform: scale(1.05);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>NeoScreenHub</h1>
-        <p>Scarica l'ultima versione del software</p>
+        <p>Inserisci la password per scaricare l'ultima versione</p>
         
-        <!-- Pulsante che scarica automaticamente l'ultima release -->
-        <a href="https://github.com/velodent/neoscreenhub/releases/latest/download/NeoScreenHub-Setup.exe" class="btn">
-            ⬇️ Scarica l'ultima versione
-        </a>
+        <input type="password" id="pass" placeholder="Inserisci password">
+        <br><br>
+        <button onclick="checkPassword()">⬇️ Scarica Ora</button>
         
-        <p><a href="index.html" style="color: #667eea;">← Torna alla Home</a></p>
+        <p style="margin-top: 40px;">
+            <a href="index.html">← Torna alla Home</a>
+        </p>
     </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById("pass").value;
+            
+            if (password === "12345678") {   // ← Cambia qui con la tua password
+                window.location.href = "https://github.com/velodent/neoscreenhub/releases/latest/download/NOME-DEL-FILE.exe";
+            } else {
+                alert("Password errata!");
+            }
+        }
+    </script>
 </body>
 </html>
