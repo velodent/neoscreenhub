@@ -38,7 +38,7 @@
         
         <input type="password" id="pass" placeholder="Inserisci password">
         <br><br>
-        <button onclick="checkPassword()">⬇️ Scarica Ora</button>
+        <button onclick="checkPassword()">⬇️ Scarica l'ultima versione</button>
         
         <p style="margin-top: 40px;">
             <a href="index.html">← Torna alla Home</a>
@@ -49,8 +49,9 @@
         function checkPassword() {
             const password = document.getElementById("pass").value;
             
-            if (password === "12345678") {   // ← Cambia qui con la tua password
-                window.location.href = "https://github.com/velodent/neoscreenhub/releases/latest/download/NOME-DEL-FILE.exe";
+            if (password === "12345678") {   // ← Cambia qui
+                // Questo link scarica automaticamente l'ultimo asset della release
+                window.location.href = "https://github.com/velodent/neoscreenhub/releases/latest/download/NeoScreenHub-Setup.exe";
             } else {
                 alert("Password errata!");
             }
