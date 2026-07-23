@@ -5,57 +5,167 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scarica NeoScreenHub</title>
   <style>
-    body { 
-      font-family: 'Segoe UI', Arial, sans-serif; 
-      background: #0f172a; 
-      color: #e2e8f0; 
-      text-align: center; 
-      padding: 80px 20px; 
-      margin: 0;
+    @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap');
+
+    :root {
+        --bg: #0f172a;
+        --surface: rgba(30, 41, 59, 0.92);
+        --accent: #60a5fa;
+        --text-primary: #e2e8f0;
+        --text-secondary: #94a3b8;
+        --success: #22c55e;
     }
-    .container { max-width: 700px; margin: 0 auto; }
-    h1 { color: #60a5fa; font-size: 2.8rem; margin-bottom: 20px; }
-    p { font-size: 1.25rem; margin-bottom: 40px; color: #94a3b8; }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body { 
+      font-family: 'Segoe UI Variable', 'Segoe UI', system-ui, Arial, sans-serif; 
+      background: linear-gradient(135deg, #1e2937 0%, #0f172a 100%);
+      color: var(--text-primary); 
+      text-align: center; 
+      padding: 48px 20px; 
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container { 
+        max-width: 520px; 
+        margin: 0 auto; 
+        background: var(--surface);
+        border-radius: 22px;
+        border: 1px solid rgba(148, 163, 184, 0.18);
+        padding: 48px 40px;
+        box-shadow: 0 20px 48px rgba(26, 22, 49, 0.45);
+        backdrop-filter: blur(32px);
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #60a5fa, #3b82f6);
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 42px;
+        font-weight: 700;
+        color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.28);
+    }
+
+    h1 { 
+        color: var(--accent); 
+        font-size: 32px; 
+        font-weight: 700;
+        line-height: 40px;
+        margin: 0 0 12px 0; 
+    }
+
+    p { 
+        font-size: 16px; 
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 32px; 
+        color: var(--text-secondary); 
+    }
+
     input {
-      padding: 14px;
-      font-size: 1.1rem;
-      width: 320px;
-      border: 1px solid #334155;
-      background: #1e2937;
+      padding: 14px 20px;
+      font-size: 16px;
+      width: 100%;
+      max-width: 360px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: rgba(15, 23, 42, 0.8);
       color: white;
       border-radius: 8px;
+      margin-bottom: 24px;
+      transition: border-color 120ms ease;
     }
+
+    input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+    }
+
     button {
-      padding: 16px 40px;
-      font-size: 1.3rem;
-      background: #22c55e;
+      padding: 16px 48px;
+      font-size: 18px;
+      font-weight: 600;
+      background: var(--success);
       color: white;
       border: none;
-      border-radius: 12px;
+      border-radius: 10px;
       cursor: pointer;
-      margin-top: 20px;
+      margin-top: 8px;
+      width: 100%;
+      max-width: 360px;
+      min-height: 52px;
+      transition: all 120ms cubic-bezier(0.2, 0, 0, 1);
+      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
     }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4);
+    }
+
+    button:active {
+      transform: scale(0.985);
+    }
+
     #status {
-      margin-top: 20px;
-      color: #94a3b8;
-      font-size: 1rem;
+      margin-top: 32px;
+      color: var(--text-secondary);
+      font-size: 14px;
+      font-weight: 400;
+      min-height: 22px;
+    }
+
+    .back-link {
+        margin-top: 48px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 120ms ease;
+    }
+
+    .back-link:hover {
+        color: #93c5fd;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="brand">
+        <div class="logo">🖥️</div>
+    </div>
     <h1>NeoScreenHub</h1>
     <p>Inserisci la password per scaricare l'ultima versione</p>
     
     <input type="password" id="pass" placeholder="Inserisci password">
-    <br><br>
     <button onclick="checkPassword()">⬇️ Scarica l'ultima versione</button>
     
     <p id="status">Ricerca ultima release...</p>
     
-    <p style="margin-top: 40px;">
-      <a href="index.html" style="color: #60a5fa;">← Torna alla Home</a>
-    </p>
+    <a href="index.html" class="back-link">← Torna alla Home</a>
   </div>
 
   <script>
