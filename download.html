@@ -3,201 +3,967 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scarica NeoScreenHub</title>
+  <meta name="description" content="Scarica l'ultima release ZIP self-contained di NeoScreen Hub per Windows 10 e Windows 11 x64.">
+  <meta name="theme-color" content="#eef8fa">
+  <link rel="canonical" href="https://neoscreenhub.velodent.eu/download.html">
+  <meta property="og:title" content="Scarica NeoScreen Hub per Windows">
+  <meta property="og:description" content="Download automatico dell'ultima release ZIP self-contained di NeoScreen Hub.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://neoscreenhub.velodent.eu/download.html">
+  <title>Scarica NeoScreen Hub — Download Windows</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap');
-
     :root {
-        --bg: #0f172a;
-        --surface: rgba(30, 41, 59, 0.92);
-        --accent: #60a5fa;
-        --text-primary: #e2e8f0;
-        --text-secondary: #94a3b8;
-        --success: #22c55e;
+      --background: #eef8fa;
+      --surface: rgba(255, 255, 255, 0.78);
+      --surface-strong: rgba(255, 255, 255, 0.94);
+      --ink: #15313b;
+      --muted: #59737c;
+      --cyan: #117ea0;
+      --cyan-dark: #09637f;
+      --cyan-soft: #d9f1f6;
+      --aqua: #2eaa9a;
+      --aqua-soft: #ddf5f1;
+      --success: #168779;
+      --warning: #a66b0b;
+      --border: rgba(80, 139, 153, 0.22);
+      --border-bright: rgba(255, 255, 255, 0.86);
+      --shadow: 0 20px 55px rgba(45, 91, 105, 0.14);
     }
 
     * {
-        box-sizing: border-box;
+      box-sizing: border-box;
     }
 
-    body { 
-      font-family: 'Segoe UI Variable', 'Segoe UI', system-ui, Arial, sans-serif; 
-      background: linear-gradient(135deg, #1e2937 0%, #0f172a 100%);
-      color: var(--text-primary); 
-      text-align: center; 
-      padding: 48px 20px; 
-      margin: 0;
+    body {
       min-height: 100vh;
+      margin: 0;
+      background:
+        radial-gradient(circle at 12% -10%, rgba(92, 207, 218, 0.29), transparent 35rem),
+        radial-gradient(circle at 94% 18%, rgba(111, 220, 192, 0.22), transparent 29rem),
+        linear-gradient(150deg, #f9fcfd 0%, var(--background) 50%, #e7f4f7 100%);
+      color: var(--ink);
+      font-family: "Segoe UI Variable", "Segoe UI", Inter, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--cyan-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.22rem;
+    }
+
+    a:focus-visible {
+      outline: 3px solid rgba(10, 127, 159, 0.32);
+      outline-offset: 3px;
+    }
+
+    .page {
+      width: min(1160px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 24px 0 38px;
+    }
+
+    .site-header {
       display: flex;
       align-items: center;
-      justify-content: center;
-    }
-
-    .container { 
-        max-width: 520px; 
-        margin: 0 auto; 
-        background: var(--surface);
-        border-radius: 22px;
-        border: 1px solid rgba(148, 163, 184, 0.18);
-        padding: 48px 40px;
-        box-shadow: 0 20px 48px rgba(26, 22, 49, 0.45);
-        backdrop-filter: blur(32px);
+      justify-content: space-between;
+      gap: 24px;
+      padding: 10px 0 28px;
     }
 
     .brand {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 16px;
-        margin-bottom: 32px;
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      min-width: 0;
+      color: var(--ink);
     }
 
-    .logo {
-        width: 80px;
-        height: 80px;
-        background: linear-gradient(135deg, #60a5fa, #3b82f6);
-        border-radius: 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 42px;
-        font-weight: 700;
-        color: white;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.28);
+    .brand:hover {
+      text-decoration: none;
     }
 
-    h1 { 
-        color: var(--accent); 
-        font-size: 32px; 
-        font-weight: 700;
-        line-height: 40px;
-        margin: 0 0 12px 0; 
+    .brand-mark {
+      position: relative;
+      display: grid;
+      flex: 0 0 auto;
+      width: 52px;
+      height: 52px;
+      place-items: center;
+      overflow: hidden;
+      border: 1px solid var(--border-bright);
+      border-radius: 15px;
+      background: linear-gradient(145deg, #effcff, #cceef3);
+      box-shadow: 0 10px 28px rgba(31, 106, 127, 0.2);
     }
 
-    p { 
-        font-size: 16px; 
-        font-weight: 400;
-        line-height: 24px;
-        margin-bottom: 32px; 
-        color: var(--text-secondary); 
+    .brand-mark::before {
+      content: "";
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      border: 1px solid rgba(17, 126, 160, 0.23);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 6px rgba(46, 170, 154, 0.08),
+        inset 0 0 14px rgba(17, 126, 160, 0.12);
     }
 
-    input {
-      padding: 14px 20px;
-      font-size: 16px;
-      width: 100%;
-      max-width: 360px;
-      border: 1px solid rgba(148, 163, 184, 0.3);
-      background: rgba(15, 23, 42, 0.8);
-      color: white;
-      border-radius: 8px;
-      margin-bottom: 24px;
-      transition: border-color 120ms ease;
+    .brand-fallback {
+      position: relative;
+      z-index: 1;
+      color: var(--cyan-dark);
+      font-size: 0.9rem;
+      font-weight: 800;
     }
 
-    input:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+    .brand-text {
+      display: grid;
+      line-height: 1.08;
     }
 
-    button {
-      padding: 16px 48px;
-      font-size: 18px;
-      font-weight: 600;
-      background: var(--success);
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      margin-top: 8px;
-      width: 100%;
-      max-width: 360px;
-      min-height: 52px;
-      transition: all 120ms cubic-bezier(0.2, 0, 0, 1);
-      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+    .brand-title {
+      font-size: 1.08rem;
+      font-weight: 800;
     }
 
-    button:hover {
+    .brand-subtitle {
+      margin-top: 5px;
+      color: var(--cyan);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav-links a {
+      display: inline-flex;
+      min-height: 40px;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 14px;
+      border: 1px solid transparent;
+      border-radius: 11px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      border-color: var(--border);
+      background: var(--surface);
+      color: var(--cyan-dark);
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(45, 91, 105, 0.08);
+    }
+
+    .glass-card,
+    .panel {
+      border: 1px solid var(--border-bright);
+      outline: 1px solid var(--border);
+      outline-offset: -1px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      -webkit-backdrop-filter: blur(22px);
+      backdrop-filter: blur(22px);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(330px, 0.72fr);
+      gap: 24px;
+      align-items: stretch;
+      padding: 20px 0 18px;
+    }
+
+    .hero-copy {
+      display: grid;
+      min-height: 470px;
+      align-content: center;
+      padding: clamp(32px, 5vw, 62px);
+      border-radius: 24px;
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      font-size: 0.77rem;
+      font-weight: 850;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 16px 0 20px;
+      color: #113640;
+      font-size: clamp(2.75rem, 6.7vw, 5.65rem);
+      line-height: 0.96;
+      letter-spacing: -0.055em;
+    }
+
+    .lead {
+      max-width: 670px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1.04rem, 1.8vw, 1.2rem);
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .primary-button {
+      display: inline-flex;
+      min-height: 54px;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      padding: 0 24px;
+      border: 1px solid rgba(12, 115, 146, 0.25);
+      border-radius: 13px;
+      background: linear-gradient(145deg, #1695b7, #0d7798);
+      color: #fff;
+      box-shadow: 0 16px 36px rgba(13, 119, 152, 0.27);
+      font-size: 1rem;
+      font-weight: 800;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .primary-button:not(:disabled):hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4);
+      box-shadow: 0 20px 46px rgba(13, 119, 152, 0.34);
+      text-decoration: none;
     }
 
-    button:active {
-      transform: scale(0.985);
+    .primary-button:disabled {
+      cursor: wait;
+      opacity: 0.62;
     }
 
-    #status {
-      margin-top: 32px;
-      color: var(--text-secondary);
-      font-size: 14px;
-      font-weight: 400;
+    .download-password {
+      min-height: 52px;
+      width: min(245px, 100%);
+      padding: 0 15px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.82);
+      color: var(--ink);
+      font: inherit;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      box-shadow: inset 0 1px 3px rgba(45, 91, 105, 0.08);
+    }
+
+    .download-password:focus {
+      border-color: var(--cyan);
+      outline: 3px solid rgba(17, 126, 160, 0.18);
+      outline-offset: 2px;
+    }
+
+    .version-note {
+      color: var(--muted);
+      font-size: 0.91rem;
+    }
+
+    .release-card {
+      display: grid;
+      align-content: start;
+      gap: 18px;
+      padding: 24px;
+      border-radius: 24px;
+      background:
+        linear-gradient(160deg, rgba(255, 255, 255, 0.92), rgba(225, 246, 248, 0.75));
+    }
+
+    .status-pill {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 11px;
+      border: 1px solid rgba(22, 135, 121, 0.24);
+      border-radius: 999px;
+      background: var(--aqua-soft);
+      color: #126b61;
+      font-size: 0.79rem;
+      font-weight: 800;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 14px rgba(22, 135, 121, 0.55);
+    }
+
+    .release-box {
+      display: grid;
+      gap: 12px;
+      padding: 17px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.62);
+    }
+
+    .release-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(80, 139, 153, 0.14);
+      color: var(--muted);
+      font-size: 0.91rem;
+    }
+
+    .release-row:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .release-row strong {
+      max-width: 62%;
+      color: #1d4650;
+      text-align: right;
+      overflow-wrap: anywhere;
+    }
+
+    .release-status {
       min-height: 22px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.86rem;
     }
 
-    .back-link {
-        margin-top: 48px;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        color: var(--accent);
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 500;
-        transition: color 120ms ease;
+    .release-status.is-ready {
+      color: #126b61;
     }
 
-    .back-link:hover {
-        color: #93c5fd;
+    .release-status.is-fallback {
+      color: var(--warning);
+    }
+
+    .data-note {
+      margin: 0;
+      padding: 15px;
+      border-left: 3px solid var(--aqua);
+      border-radius: 8px;
+      background: rgba(221, 245, 241, 0.68);
+      color: #42636b;
+      font-size: 0.88rem;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(310px, 0.92fr);
+      gap: 18px;
+      margin: 30px 0;
+    }
+
+    .panel {
+      padding: 25px;
+      border-radius: 19px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 20px;
+      color: #173f49;
+      font-size: 1.1rem;
+    }
+
+    .title-icon {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--cyan-soft);
+      color: var(--cyan-dark);
+      font-size: 0.82rem;
+      font-weight: 900;
+    }
+
+    .requirements {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .requirements th,
+    .requirements td {
+      padding: 12px 10px;
+      border-bottom: 1px solid rgba(80, 139, 153, 0.15);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .requirements th {
+      color: var(--cyan-dark);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .requirements td {
+      color: var(--muted);
+    }
+
+    .requirements td:first-child {
+      color: #294f59;
+      font-weight: 700;
+    }
+
+    .guide-steps {
+      display: grid;
+      gap: 14px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr);
+      gap: 13px;
+      align-items: start;
+      padding: 14px;
+      border: 1px solid rgba(80, 139, 153, 0.17);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    .step-number {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--aqua-soft);
+      color: #167c70;
+      font-weight: 900;
+    }
+
+    .step h3 {
+      margin: 0 0 3px;
+      color: #214953;
+      font-size: 0.96rem;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .security-note {
+      margin-top: 16px;
+      padding: 15px;
+      border: 1px solid rgba(46, 170, 154, 0.2);
+      border-radius: 13px;
+      background: var(--aqua-soft);
+      color: #35615f;
+      font-size: 0.88rem;
+    }
+
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+      padding: 24px 2px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .page {
+        width: min(100% - 24px, 1160px);
+        padding-top: 12px;
+      }
+
+      .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+      }
+
+      .nav-links a {
+        flex: 1;
+      }
+
+      .hero {
+        padding-top: 6px;
+      }
+
+      .hero-copy,
+      .release-card,
+      .panel {
+        padding: 22px;
+        border-radius: 18px;
+      }
+
+      h1 {
+        font-size: clamp(2.7rem, 16vw, 4rem);
+      }
+
+      .actions,
+      .primary-button {
+        width: 100%;
+      }
+
+      .release-row {
+        display: grid;
+        gap: 3px;
+      }
+
+      .release-row strong {
+        max-width: 100%;
+        text-align: left;
+      }
+
+      .requirements thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+      }
+
+      .requirements,
+      .requirements tbody,
+      .requirements tr,
+      .requirements td {
+        display: block;
+        width: 100%;
+      }
+
+      .requirements tr {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(80, 139, 153, 0.17);
+      }
+
+      .requirements td {
+        display: grid;
+        grid-template-columns: 42% 1fr;
+        gap: 10px;
+        padding: 4px 0;
+        border: 0;
+      }
+
+      .requirements td::before {
+        content: attr(data-label);
+        color: var(--cyan-dark);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media (prefers-contrast: more) {
+      :root {
+        --muted: #314f58;
+        --border: rgba(24, 78, 91, 0.5);
+      }
+
+      .glass-card,
+      .panel {
+        background: #fff;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="brand">
-        <div class="logo">🖥️</div>
-    </div>
-    <h1>NeoScreenHub</h1>
-    <p>Inserisci la password per scaricare l'ultima versione</p>
-    
-    <input type="password" id="pass" placeholder="Inserisci password">
-    <button onclick="checkPassword()">⬇️ Scarica l'ultima versione</button>
-    
-    <p id="status">Ricerca ultima release...</p>
-    
-    <a href="index.html" class="back-link">← Torna alla Home</a>
-  </div>
+  <main class="page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="NeoScreen Hub, pagina iniziale">
+        <span class="brand-mark">
+          <span class="brand-fallback" aria-hidden="true">NS</span>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">NeoScreen Hub</span>
+          <span class="brand-subtitle">Medical Data Intelligence</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a class="active" href="download.html" aria-current="page">Scarica</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="download-title">
+      <div class="hero-copy glass-card">
+        <div class="eyebrow">Distribuzione Windows self-contained</div>
+        <h1 id="download-title">Scarica NeoScreen Hub</h1>
+        <p class="lead">
+          Ottieni automaticamente il pacchetto ZIP dell'ultima release per
+          Windows x64. Il runtime .NET è già incluso: dopo l'estrazione puoi
+          avviare direttamente la procedura di installazione.
+        </p>
+        <form id="download-form" class="actions" novalidate>
+          <label for="download-password" class="version-note">Password di accesso</label>
+          <input
+            id="download-password"
+            class="download-password"
+            type="password"
+            inputmode="numeric"
+            autocomplete="off"
+            aria-describedby="download-note download-error"
+            placeholder="Inserisci la password">
+          <button id="download-button" class="primary-button" type="submit" disabled>
+            <span aria-hidden="true">↓</span>
+            <span id="download-button-label">Preparo il download…</span>
+          </button>
+          <span id="download-note" class="version-note" aria-live="polite">
+            Ricerca dell'ultima release…
+          </span>
+          <span id="download-error" class="release-status is-fallback" role="alert" hidden>
+            Password non corretta.
+          </span>
+        </form>
+      </div>
+
+      <aside class="release-card glass-card" aria-label="Dettagli dell'ultima release">
+        <span class="status-pill">
+          <span class="status-dot" aria-hidden="true"></span>
+          Ultima release GitHub
+        </span>
+        <div class="release-box">
+          <div class="release-row">
+            <span>Versione</span>
+            <strong id="release-version">In aggiornamento</strong>
+          </div>
+          <div class="release-row">
+            <span>Piattaforma</span>
+            <strong>Windows 10 / 11 x64</strong>
+          </div>
+          <div class="release-row">
+            <span>Formato</span>
+            <strong id="release-format">Archivio ZIP self-contained</strong>
+          </div>
+          <div class="release-row">
+            <span>Pubblicazione</span>
+            <strong id="release-date">GitHub Releases</strong>
+          </div>
+        </div>
+        <p id="release-status" class="release-status" aria-live="polite">
+          Collegamento automatico all'asset ZIP più recente.
+        </p>
+        <p class="data-note">
+          Aggiornamenti e disinstallazione preservano il Database in
+          <strong>%LOCALAPPDATA%\NeoScreenHub\Data\</strong>. Prima di
+          aggiornare è comunque raccomandato un backup verificato.
+        </p>
+      </aside>
+    </section>
+
+    <section class="content-grid" aria-label="Informazioni per installare NeoScreen Hub">
+      <div class="panel">
+        <h2 class="section-title">
+          <span class="title-icon" aria-hidden="true">PC</span>
+          Requisiti di sistema
+        </h2>
+        <table class="requirements">
+          <thead>
+            <tr>
+              <th>Componente</th>
+              <th>Minimo</th>
+              <th>Consigliato</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Componente">Sistema operativo</td>
+              <td data-label="Minimo">Windows 10 64-bit</td>
+              <td data-label="Consigliato">Windows 11 64-bit</td>
+            </tr>
+            <tr>
+              <td data-label="Componente">Architettura</td>
+              <td data-label="Minimo">Processore x64</td>
+              <td data-label="Consigliato">Processore x64 recente</td>
+            </tr>
+            <tr>
+              <td data-label="Componente">Memoria RAM</td>
+              <td data-label="Minimo">4 GB</td>
+              <td data-label="Consigliato">8 GB o superiore</td>
+            </tr>
+            <tr>
+              <td data-label="Componente">Spazio libero</td>
+              <td data-label="Minimo">1 GB</td>
+              <td data-label="Consigliato">2 GB più spazio per Database e backup</td>
+            </tr>
+            <tr>
+              <td data-label="Componente">Connessione</td>
+              <td data-label="Minimo">Non richiesta per l'uso locale</td>
+              <td data-label="Consigliato">Solo per update e backup Drive opzionale</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h2 class="section-title">
+          <span class="title-icon" aria-hidden="true">✓</span>
+          Installazione in quattro passaggi
+        </h2>
+        <div class="guide-steps">
+          <div class="step">
+            <span class="step-number" aria-hidden="true">1</span>
+            <div>
+              <h3>Scarica il pacchetto ZIP</h3>
+              <p>Il pulsante seleziona l'asset self-contained dell'ultima release pubblicata.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number" aria-hidden="true">2</span>
+            <div>
+              <h3>Estrai tutti i file</h3>
+              <p>Non eseguire l'installer direttamente dall'anteprima dell'archivio ZIP.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number" aria-hidden="true">3</span>
+            <div>
+              <h3>Avvia Installa-NeoScreenHub.cmd</h3>
+              <p>Chiudi prima eventuali istanze dell'applicazione e completa la procedura.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number" aria-hidden="true">4</span>
+            <div>
+              <h3>Proteggi la Master Recovery Key</h3>
+              <p>Al primo avvio crea l'Admin, salva la MRK e confermala quando richiesto.</p>
+            </div>
+          </div>
+        </div>
+        <div class="security-note">
+          NeoScreen Hub conserva i dati sanitari nel Database locale cifrato
+          SQLCipher. La MRK non sostituisce il backup: per il ripristino servono
+          sempre un Recovery Set integro e la relativa chiave.
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="windows-protection-title">
+      <h2 id="windows-protection-title" class="section-title">
+        <span class="title-icon" aria-hidden="true">!</span>
+        Avviso di protezione Windows
+      </h2>
+      <p>
+        Al primo avvio potrebbe comparire il riquadro blu
+        <strong>“PC protetto da Windows”</strong>.
+      </p>
+      <div class="guide-steps">
+        <div class="step">
+          <span class="step-number" aria-hidden="true">1</span>
+          <div>
+            <h3>Ulteriori informazioni</h3>
+            <p>Clicca su “Ulteriori informazioni” per visualizzare le opzioni dell'installer.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number" aria-hidden="true">2</span>
+          <div>
+            <h3>Esegui comunque</h3>
+            <p>Premi “Esegui comunque” e completa la procedura guidata di installazione.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+      </div>
+      <div>Supporto: <a href="mailto:velodent@hotmail.com">velodent@hotmail.com</a></div>
+    </footer>
+  </main>
 
   <script>
-    let downloadUrl = "";
+    (function () {
+      "use strict";
 
-    // Recupera automaticamente l'ultimo .exe dalla release
-    fetch("https://api.github.com/repos/velodent/neoscreenhub/releases/latest")
-      .then(response => response.json())
-      .then(release => {
-        const asset = release.assets.find(a => a.name.toLowerCase().endsWith('.exe'));
-        if (asset) {
-          downloadUrl = asset.browser_download_url;
-          document.getElementById("status").textContent = `Trovato: ${release.tag_name} - Pronto al download`;
-        } else {
-          document.getElementById("status").textContent = "Nessun file .exe trovato";
-        }
-      })
-      .catch(() => {
-        document.getElementById("status").textContent = "Errore di connessione";
-      });
+      const latestReleaseApiUrl =
+        "https://api.github.com/repos/velodent/neoscreenhub/releases/latest";
+      const preferredAssetPattern =
+        /^NeoScreenHub-.+-win-x64-self-contained\.zip$/i;
+      const downloadPassword = "12345678";
 
-    function checkPassword() {
-      if (document.getElementById("pass").value === "12345678") {
-        if (downloadUrl) {
-          window.location.href = downloadUrl;
-        } else {
-          alert("File non ancora pronto. Riprova tra qualche secondo.");
+      const form = document.getElementById("download-form");
+      const password = document.getElementById("download-password");
+      const button = document.getElementById("download-button");
+      const buttonLabel = document.getElementById("download-button-label");
+      const note = document.getElementById("download-note");
+      const error = document.getElementById("download-error");
+      const version = document.getElementById("release-version");
+      const format = document.getElementById("release-format");
+      const releaseDate = document.getElementById("release-date");
+      const status = document.getElementById("release-status");
+      let downloadUrl = "";
+
+      function formatBytes(bytes) {
+        if (!Number.isFinite(bytes) || bytes <= 0) {
+          return "";
         }
-      } else {
-        alert("Password errata!");
+
+        const mebibytes = bytes / 1024 / 1024;
+        return mebibytes.toLocaleString("it-IT", {
+          minimumFractionDigits: 1,
+          maximumFractionDigits: 1
+        }) + " MB";
       }
-    }
+
+      function formatDate(value) {
+        const parsed = new Date(value);
+        if (Number.isNaN(parsed.getTime())) {
+          return "GitHub Releases";
+        }
+
+        return new Intl.DateTimeFormat("it-IT", {
+          day: "2-digit",
+          month: "long",
+          year: "numeric"
+        }).format(parsed);
+      }
+
+      function useFallback() {
+        downloadUrl = "";
+        button.disabled = true;
+        buttonLabel.textContent = "Download non disponibile";
+        note.textContent = "Contatta il supporto per ricevere il pacchetto.";
+        version.textContent = "Non disponibile";
+        format.textContent = "Archivio ZIP";
+        releaseDate.textContent = "Disponibilità da verificare";
+        status.textContent =
+          "Non è stato possibile individuare il pacchetto di installazione.";
+        status.classList.remove("is-ready");
+        status.classList.add("is-fallback");
+      }
+
+      fetch(latestReleaseApiUrl, {
+        headers: {
+          "Accept": "application/vnd.github+json",
+          "X-GitHub-Api-Version": "2022-11-28"
+        },
+        cache: "no-store"
+      })
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("GITHUB_RELEASE_API_UNAVAILABLE");
+          }
+
+          return response.json();
+        })
+        .then(function (release) {
+          const assets = Array.isArray(release.assets) ? release.assets : [];
+          const preferredAsset = assets.find(function (asset) {
+            return asset &&
+              typeof asset.name === "string" &&
+              preferredAssetPattern.test(asset.name) &&
+              typeof asset.browser_download_url === "string";
+          });
+          const zipAsset = preferredAsset || assets.find(function (asset) {
+            return asset &&
+              typeof asset.name === "string" &&
+              asset.name.toLowerCase().endsWith(".zip") &&
+              typeof asset.browser_download_url === "string";
+          });
+
+          if (!zipAsset) {
+            useFallback();
+            return;
+          }
+
+          const tagName =
+            release.tag_name || release.name || "ultima versione";
+          downloadUrl = zipAsset.browser_download_url;
+          button.disabled = false;
+          buttonLabel.textContent = "Scarica NeoScreen Hub " + tagName;
+          note.textContent =
+            "Pacchetto Windows x64 · " + formatBytes(zipAsset.size);
+          version.textContent = tagName;
+          format.textContent = zipAsset.name;
+          releaseDate.textContent =
+            formatDate(release.published_at || release.created_at);
+          status.textContent =
+            "Download collegato all'asset ZIP dell'ultima release GitHub.";
+          status.classList.remove("is-fallback");
+          status.classList.add("is-ready");
+        })
+        .catch(useFallback);
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        error.hidden = true;
+
+        if (!downloadUrl) {
+          useFallback();
+          return;
+        }
+
+        if (password.value !== downloadPassword) {
+          error.hidden = false;
+          password.select();
+          password.focus();
+          return;
+        }
+
+        password.value = "";
+        window.location.assign(downloadUrl);
+      });
+    })();
   </script>
 </body>
 </html>
