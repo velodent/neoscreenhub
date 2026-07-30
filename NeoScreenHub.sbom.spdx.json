@@ -2,10 +2,10 @@
     "spdxVersion":  "SPDX-2.3",
     "dataLicense":  "CC0-1.0",
     "SPDXID":  "SPDXRef-DOCUMENT",
-    "name":  "NeoScreenHub-1.0.3-win-x64",
-    "documentNamespace":  "https://neoscreenhub.local/sbom/1.0.3/win-x64",
+    "name":  "NeoScreenHub-1.0.4-win-x64",
+    "documentNamespace":  "https://neoscreenhub.local/sbom/1.0.4/win-x64",
     "creationInfo":  {
-                         "created":  "2026-07-30T10:06:59Z",
+                         "created":  "2026-07-30T13:19:43Z",
                          "creators":  [
                                           "Tool: NeoScreenHub.New-ReleaseSbom/1.0"
                                       ]
@@ -14,7 +14,7 @@
                      {
                          "name":  "NeoScreen Hub",
                          "SPDXID":  "SPDXRef-Package-NeoScreenHub",
-                         "versionInfo":  "1.0.3",
+                         "versionInfo":  "1.0.4",
                          "downloadLocation":  "NOASSERTION",
                          "filesAnalyzed":  false,
                          "licenseConcluded":  "NOASSERTION",
