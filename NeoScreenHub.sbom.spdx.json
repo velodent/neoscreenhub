@@ -1,0 +1,479 @@
+{
+    "spdxVersion":  "SPDX-2.3",
+    "dataLicense":  "CC0-1.0",
+    "SPDXID":  "SPDXRef-DOCUMENT",
+    "name":  "NeoScreenHub-1.0.3-win-x64",
+    "documentNamespace":  "https://neoscreenhub.local/sbom/1.0.3/win-x64",
+    "creationInfo":  {
+                         "created":  "2026-07-30T10:06:59Z",
+                         "creators":  [
+                                          "Tool: NeoScreenHub.New-ReleaseSbom/1.0"
+                                      ]
+                     },
+    "packages":  [
+                     {
+                         "name":  "NeoScreen Hub",
+                         "SPDXID":  "SPDXRef-Package-NeoScreenHub",
+                         "versionInfo":  "1.0.3",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "NOASSERTION",
+                         "licenseDeclared":  "NOASSERTION",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "Avalonia.Angle.Windows.Natives",
+                         "SPDXID":  "SPDXRef-Package-Avalonia.Angle.Windows.Natives-2.1.27548.20260419",
+                         "versionInfo":  "2.1.27548.20260419",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "BSD-3-Clause",
+                         "licenseDeclared":  "BSD-3-Clause",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "Avalonia.Controls.DataGrid",
+                         "SPDXID":  "SPDXRef-Package-Avalonia.Controls.DataGrid-12.1.0",
+                         "versionInfo":  "12.1.0",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "Avalonia.HarfBuzz",
+                         "SPDXID":  "SPDXRef-Package-Avalonia.HarfBuzz-12.1.0",
+                         "versionInfo":  "12.1.0",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "Avalonia.Remote.Protocol",
+                         "SPDXID":  "SPDXRef-Package-Avalonia.Remote.Protocol-12.1.0",
+                         "versionInfo":  "12.1.0",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "Avalonia.Skia",
+                         "SPDXID":  "SPDXRef-Package-Avalonia.Skia-12.1.0",
+                         "versionInfo":  "12.1.0",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "Avalonia.Themes.Fluent",
+                         "SPDXID":  "SPDXRef-Package-Avalonia.Themes.Fluent-12.1.0",
+                         "versionInfo":  "12.1.0",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "Avalonia.Win32",
+                         "SPDXID":  "SPDXRef-Package-Avalonia.Win32-12.1.0",
+                         "versionInfo":  "12.1.0",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "Avalonia",
+                         "SPDXID":  "SPDXRef-Package-Avalonia-12.1.0",
+                         "versionInfo":  "12.1.0",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "HarfBuzzSharp.NativeAssets.Win32",
+                         "SPDXID":  "SPDXRef-Package-HarfBuzzSharp.NativeAssets.Win32-8.3.1.3",
+                         "versionInfo":  "8.3.1.3",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "HarfBuzzSharp",
+                         "SPDXID":  "SPDXRef-Package-HarfBuzzSharp-8.3.1.3",
+                         "versionInfo":  "8.3.1.3",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "Konscious.Security.Cryptography.Argon2",
+                         "SPDXID":  "SPDXRef-Package-Konscious.Security.Cryptography.Argon2-1.3.1",
+                         "versionInfo":  "1.3.1",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "Konscious.Security.Cryptography.Blake2",
+                         "SPDXID":  "SPDXRef-Package-Konscious.Security.Cryptography.Blake2-1.1.1",
+                         "versionInfo":  "1.1.1",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "MicroCom.Runtime",
+                         "SPDXID":  "SPDXRef-Package-MicroCom.Runtime-0.11.6",
+                         "versionInfo":  "0.11.6",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "Microsoft.Data.Sqlite.Core",
+                         "SPDXID":  "SPDXRef-Package-Microsoft.Data.Sqlite.Core-10.0.10",
+                         "versionInfo":  "10.0.10",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "Microsoft.Extensions.DependencyInjection.Abstractions",
+                         "SPDXID":  "SPDXRef-Package-Microsoft.Extensions.DependencyInjection.Abstractions-10.0.10",
+                         "versionInfo":  "10.0.10",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "Microsoft.Extensions.DependencyInjection",
+                         "SPDXID":  "SPDXRef-Package-Microsoft.Extensions.DependencyInjection-10.0.10",
+                         "versionInfo":  "10.0.10",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "Microsoft.Extensions.Logging.Abstractions",
+                         "SPDXID":  "SPDXRef-Package-Microsoft.Extensions.Logging.Abstractions-10.0.10",
+                         "versionInfo":  "10.0.10",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "Microsoft.Extensions.Logging",
+                         "SPDXID":  "SPDXRef-Package-Microsoft.Extensions.Logging-10.0.10",
+                         "versionInfo":  "10.0.10",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "Microsoft.Extensions.Options",
+                         "SPDXID":  "SPDXRef-Package-Microsoft.Extensions.Options-10.0.10",
+                         "versionInfo":  "10.0.10",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "Microsoft.Extensions.Primitives",
+                         "SPDXID":  "SPDXRef-Package-Microsoft.Extensions.Primitives-10.0.10",
+                         "versionInfo":  "10.0.10",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "runtimepack.Microsoft.NETCore.App.Runtime.win-x64",
+                         "SPDXID":  "SPDXRef-Package-runtimepack.Microsoft.NETCore.App.Runtime.win-x64-10.0.10",
+                         "versionInfo":  "10.0.10",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "runtimepack.Microsoft.Windows.SDK.NET.Ref",
+                         "SPDXID":  "SPDXRef-Package-runtimepack.Microsoft.Windows.SDK.NET.Ref-10.0.19041.57",
+                         "versionInfo":  "10.0.19041.57",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "SkiaSharp.NativeAssets.Win32",
+                         "SPDXID":  "SPDXRef-Package-SkiaSharp.NativeAssets.Win32-3.119.4",
+                         "versionInfo":  "3.119.4",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "SkiaSharp",
+                         "SPDXID":  "SPDXRef-Package-SkiaSharp-3.119.4",
+                         "versionInfo":  "3.119.4",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "SQLitePCLRaw.core",
+                         "SPDXID":  "SPDXRef-Package-SQLitePCLRaw.core-3.0.3",
+                         "versionInfo":  "3.0.3",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "SQLitePCLRaw.provider.dynamic_cdecl",
+                         "SPDXID":  "SPDXRef-Package-SQLitePCLRaw.provider.dynamic-cdecl-3.0.3",
+                         "versionInfo":  "3.0.3",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "System.Security.Cryptography.ProtectedData",
+                         "SPDXID":  "SPDXRef-Package-System.Security.Cryptography.ProtectedData-10.0.10",
+                         "versionInfo":  "10.0.10",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "licenseConcluded":  "MIT",
+                         "licenseDeclared":  "MIT",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "SQLCipher Community",
+                         "SPDXID":  "SPDXRef-Package-SQLCipher-Community",
+                         "versionInfo":  "4.17.0",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "checksums":  [
+                                           {
+                                               "algorithm":  "SHA256",
+                                               "checksumValue":  "3712F9353F84C5FD764FF56C20766A57AAF017DFE9017E4722F5D3EAFA95EF48"
+                                           }
+                                       ],
+                         "licenseConcluded":  "BSD-3-Clause",
+                         "licenseDeclared":  "BSD-3-Clause",
+                         "copyrightText":  "NOASSERTION"
+                     },
+                     {
+                         "name":  "OpenSSL",
+                         "SPDXID":  "SPDXRef-Package-OpenSSL",
+                         "versionInfo":  "3.6.3",
+                         "downloadLocation":  "NOASSERTION",
+                         "filesAnalyzed":  false,
+                         "checksums":  [
+                                           {
+                                               "algorithm":  "SHA256",
+                                               "checksumValue":  "1E5B6941C61CFDB0E67DEA4342E655F1F9E75433706BD8E5BBB9A8C4682C475C"
+                                           }
+                                       ],
+                         "licenseConcluded":  "Apache-2.0",
+                         "licenseDeclared":  "Apache-2.0",
+                         "copyrightText":  "NOASSERTION"
+                     }
+                 ],
+    "relationships":  [
+                          {
+                              "spdxElementId":  "SPDXRef-DOCUMENT",
+                              "relationshipType":  "DESCRIBES",
+                              "relatedSpdxElement":  "SPDXRef-Package-NeoScreenHub"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-Avalonia.Angle.Windows.Natives-2.1.27548.20260419"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-Avalonia.Controls.DataGrid-12.1.0"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-Avalonia.HarfBuzz-12.1.0"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-Avalonia.Remote.Protocol-12.1.0"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-Avalonia.Skia-12.1.0"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-Avalonia.Themes.Fluent-12.1.0"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-Avalonia.Win32-12.1.0"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-Avalonia-12.1.0"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-HarfBuzzSharp.NativeAssets.Win32-8.3.1.3"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-HarfBuzzSharp-8.3.1.3"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-Konscious.Security.Cryptography.Argon2-1.3.1"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-Konscious.Security.Cryptography.Blake2-1.1.1"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-MicroCom.Runtime-0.11.6"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-Microsoft.Data.Sqlite.Core-10.0.10"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-Microsoft.Extensions.DependencyInjection.Abstractions-10.0.10"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-Microsoft.Extensions.DependencyInjection-10.0.10"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-Microsoft.Extensions.Logging.Abstractions-10.0.10"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-Microsoft.Extensions.Logging-10.0.10"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-Microsoft.Extensions.Options-10.0.10"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-Microsoft.Extensions.Primitives-10.0.10"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-runtimepack.Microsoft.NETCore.App.Runtime.win-x64-10.0.10"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-runtimepack.Microsoft.Windows.SDK.NET.Ref-10.0.19041.57"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-SkiaSharp.NativeAssets.Win32-3.119.4"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-SkiaSharp-3.119.4"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-SQLitePCLRaw.core-3.0.3"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-SQLitePCLRaw.provider.dynamic-cdecl-3.0.3"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-System.Security.Cryptography.ProtectedData-10.0.10"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-SQLCipher-Community"
+                          },
+                          {
+                              "spdxElementId":  "SPDXRef-Package-NeoScreenHub",
+                              "relationshipType":  "DEPENDS_ON",
+                              "relatedSpdxElement":  "SPDXRef-Package-OpenSSL"
+                          }
+                      ]
+}
