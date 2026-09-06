@@ -1,10 +1,10 @@
-# NeoScreen Hub — Verifica di copertura funzionale per la release 1.0.3
+# NeoScreen Hub — Verifica di copertura funzionale per la release 1.0.11
 
-Data verifica: **2026-07-28**
+Data verifica: **2026-09-04**
 
 ## 1. Esito
 
-La build tecnica `1.0.3` è riproducibile, self-contained `win-x64`, completa
+La build tecnica `1.0.11` è riproducibile, self-contained `win-x64`, completa
 del runtime .NET 10 e accompagnata da installer conservativo, checksum, SBOM,
 manuale e gate automatici. Il pacchetto generato in questo workspace è un
 **artifact tecnico di collaudo**, non una release autorizzata per dati sanitari
@@ -24,7 +24,7 @@ dell'attestazione medica impedisce alla candidate di diventare operativa.
 | Area | Copertura verificata |
 |---|---|
 | Foundation desktop | .NET 10/Avalonia `win-x64`, Clean Architecture, i18n IT/EN, Medical Clean Glass, logging redatto |
-| Database e sicurezza | SQLCipher Community, fixed-point INTEGER, DPAPI/MRK, Recovery Set autenticato, migrazioni fino a v14 |
+| Database e sicurezza | SQLCipher Community, fixed-point INTEGER, DPAPI/MRK, Recovery Set autenticato, migrazioni fino a v16 |
 | Autenticazione | Cold Unlock Admin/password e Technologist/PIN, RBAC, throttling, gestione utenti e step-up Admin |
 | Ingestion primario | CSV 104 colonne Windows-1252/RFC 4180, streaming read-only, Skip & Warn, peso, identità HMAC v2, idempotenza e 53 rapporti |
 | Query | AST parametrizzato, paginazione keyset, ricerca paziente, timeline, filtri salvati e benchmark da un milione di righe |
@@ -32,7 +32,7 @@ dell'attestazione medica impedisce alla candidate di diventare operativa.
 | Backup/restore | `.nshbackup` bounded, provider locale e infrastruttura Drive OAuth/PKCE, restore in staging, audit e quote |
 | Second Tier | parser MMA/IVA/HCY/MSUD, matching paziente, code I/R/C, interprete phase-aware e casi fail-closed |
 | Motore clinico | AST bounded, tri-state, release prospective-only, shadow evaluation, routing Standard/2TT/Misto, TPN, Golden Runner e Visual Rule Builder |
-| Workflow | Ciclo del Rosso, Retest, Richiami, code/aging, visual evidence, refertazione e clipboard audit |
+| Workflow | Ciclo del Rosso, Retest, Richiami, auto-routing Reflex 2TT, azioni Daily Review in RowDetails frozen, CheckIn in code/TPN/storia, code/aging, visual evidence, refertazione e clipboard audit |
 | Release engineering | restore locked, dipendenze FOSS, build/test/format, privacy gate, publish self-contained, SBOM, checksum e prova install→update→uninstall |
 
 ## 3. Funzioni software ancora incomplete
@@ -78,7 +78,7 @@ descritti come completati:
 ## 5. Procedure pratiche prima del pilota
 
 1. chiudere o accettare formalmente i backlog software della sezione 3;
-2. eseguire commit revisionato, tag `v1.0.3` e build da worktree pulito;
+2. eseguire commit revisionato, tag `v1.0.11` e build da worktree pulito;
 3. procurare certificato Authenticode istituzionale e timestamp authority;
 4. eseguire `New-Release.ps1 -RequireSignature`;
 5. pubblicare ZIP, `.sha256`, SBOM e note di migrazione sulla GitHub Release;
