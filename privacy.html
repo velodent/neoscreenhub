@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Informativa privacy di NeoScreen Hub: trattamento locale dei dati, sicurezza, Google Drive, GitHub e diritti degli interessati.">
+  <meta name="theme-color" content="#eef8fa">
+  <meta name="robots" content="index,follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://neoscreenhub.velodent.eu/privacy.html">
+  <meta property="og:title" content="Privacy Policy — NeoScreen Hub">
+  <meta property="og:description" content="Come NeoScreen Hub accede, usa, conserva e protegge i dati, inclusi i dati Google Drive autorizzati dall'utente.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://neoscreenhub.velodent.eu/privacy.html">
+  <title>Privacy Policy — NeoScreen Hub</title>
+  <style>
+    :root {
+      --background: #eef8fa;
+      --surface: rgba(255, 255, 255, 0.78);
+      --surface-strong: rgba(255, 255, 255, 0.94);
+      --ink: #15313b;
+      --muted: #59737c;
+      --cyan: #117ea0;
+      --cyan-dark: #09637f;
+      --cyan-soft: #d9f1f6;
+      --aqua: #2eaa9a;
+      --aqua-soft: #ddf5f1;
+      --border: rgba(80, 139, 153, 0.22);
+      --border-bright: rgba(255, 255, 255, 0.84);
+      --shadow: 0 20px 55px rgba(45, 91, 105, 0.14);
+      --focus: #0a7f9f;
+      --warning: #9a6110;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background:
+        radial-gradient(circle at 10% -8%, rgba(92, 207, 218, 0.28), transparent 34rem),
+        radial-gradient(circle at 92% 16%, rgba(111, 220, 192, 0.22), transparent 28rem),
+        linear-gradient(150deg, #f8fcfd 0%, var(--background) 48%, #e7f4f7 100%);
+      color: var(--ink);
+      font-family: "Segoe UI Variable", "Segoe UI", Inter, Arial, sans-serif;
+      line-height: 1.68;
+    }
+
+    a {
+      color: var(--cyan-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.22rem;
+    }
+
+    a:focus-visible,
+    .toc a:focus-visible {
+      outline: 3px solid rgba(10, 127, 159, 0.32);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      top: 10px;
+      left: 10px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--cyan-dark);
+      box-shadow: var(--shadow);
+      transform: translateY(-160%);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .page {
+      width: min(1160px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 24px 0 38px;
+    }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 10px 0 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      min-width: 0;
+      color: var(--ink);
+    }
+
+    .brand:hover {
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      position: relative;
+      display: grid;
+      flex: 0 0 auto;
+      width: 52px;
+      height: 52px;
+      place-items: center;
+      overflow: hidden;
+      border: 1px solid var(--border-bright);
+      border-radius: 15px;
+      background: linear-gradient(145deg, #effcff, #cceef3);
+      box-shadow: 0 10px 28px rgba(31, 106, 127, 0.2);
+    }
+
+    .brand-mark::before {
+      content: "";
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      border: 1px solid rgba(17, 126, 160, 0.23);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 6px rgba(46, 170, 154, 0.08),
+        inset 0 0 14px rgba(17, 126, 160, 0.12);
+    }
+
+    .brand-fallback {
+      position: relative;
+      z-index: 1;
+      color: var(--cyan-dark);
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-text {
+      display: grid;
+      line-height: 1.08;
+    }
+
+    .brand-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .brand-subtitle {
+      margin-top: 5px;
+      color: var(--cyan);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav-links a {
+      display: inline-flex;
+      min-height: 40px;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 14px;
+      border: 1px solid transparent;
+      border-radius: 11px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      border-color: var(--border);
+      background: var(--surface);
+      color: var(--cyan-dark);
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(45, 91, 105, 0.08);
+    }
+
+    .glass-card,
+    .policy-section,
+    .toc {
+      border: 1px solid var(--border-bright);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px) saturate(118%);
+      -webkit-backdrop-filter: blur(18px) saturate(118%);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .hero-copy,
+    .summary-card {
+      padding: 34px;
+      border-radius: 22px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 7px 11px;
+      border: 1px solid rgba(17, 126, 160, 0.18);
+      border-radius: 999px;
+      background: var(--cyan-soft);
+      color: var(--cyan-dark);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin: 0 0 15px;
+      font-size: clamp(2.25rem, 5vw, 4rem);
+      letter-spacing: -0.055em;
+    }
+
+    .lead {
+      max-width: 72ch;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .updated {
+      display: inline-flex;
+      margin-top: 20px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: var(--aqua-soft);
+      color: #126b61;
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .summary-card {
+      display: grid;
+      align-content: center;
+      gap: 13px;
+    }
+
+    .summary-item {
+      padding: 14px;
+      border: 1px solid rgba(80, 139, 153, 0.18);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.58);
+    }
+
+    .summary-item strong {
+      display: block;
+      margin-bottom: 3px;
+      color: #214953;
+    }
+
+    .summary-item span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 270px minmax(0, 1fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 18px;
+      padding: 20px;
+      border-radius: 18px;
+    }
+
+    .toc h2 {
+      margin: 0 0 12px;
+      color: #214953;
+      font-size: 1rem;
+    }
+
+    .toc ol {
+      display: grid;
+      gap: 5px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: policy;
+    }
+
+    .toc li {
+      counter-increment: policy;
+    }
+
+    .toc a {
+      display: grid;
+      grid-template-columns: 26px minmax(0, 1fr);
+      gap: 7px;
+      padding: 7px 8px;
+      border-radius: 9px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.35;
+    }
+
+    .toc a::before {
+      content: counter(policy, decimal-leading-zero);
+      color: var(--cyan);
+      font-weight: 800;
+    }
+
+    .toc a:hover {
+      background: var(--cyan-soft);
+      color: var(--cyan-dark);
+      text-decoration: none;
+    }
+
+    .policy-content {
+      display: grid;
+      gap: 16px;
+    }
+
+    .policy-section {
+      scroll-margin-top: 18px;
+      padding: 27px;
+      border-radius: 18px;
+    }
+
+    .policy-section h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 14px;
+      color: #173f49;
+      font-size: 1.22rem;
+    }
+
+    .section-number {
+      display: grid;
+      flex: 0 0 auto;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--cyan-soft);
+      color: var(--cyan-dark);
+      font-size: 0.78rem;
+      font-weight: 900;
+    }
+
+    .policy-section h3 {
+      margin: 22px 0 8px;
+      color: #214953;
+      font-size: 1rem;
+    }
+
+    .policy-section p,
+    .policy-section li {
+      color: var(--muted);
+    }
+
+    .policy-section p {
+      margin: 0 0 11px;
+    }
+
+    .policy-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-section ul {
+      margin: 8px 0 12px;
+      padding-left: 22px;
+    }
+
+    .policy-section li + li {
+      margin-top: 7px;
+    }
+
+    .notice {
+      margin: 16px 0 0;
+      padding: 15px 17px;
+      border-left: 3px solid var(--aqua);
+      border-radius: 8px 13px 13px 8px;
+      background: rgba(221, 245, 241, 0.7);
+      color: #35615f;
+    }
+
+    .notice.warning {
+      border-left-color: #d89121;
+      background: rgba(255, 244, 219, 0.74);
+      color: #6c521f;
+    }
+
+    .data-table-wrap {
+      margin: 15px 0;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.54);
+    }
+
+    .data-table {
+      width: 100%;
+      min-width: 680px;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    .data-table th,
+    .data-table td {
+      padding: 12px 13px;
+      border-bottom: 1px solid rgba(80, 139, 153, 0.15);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .data-table th {
+      background: rgba(217, 241, 246, 0.65);
+      color: var(--cyan-dark);
+      font-size: 0.73rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .data-table td {
+      color: var(--muted);
+    }
+
+    .data-table td:first-child {
+      color: #294f59;
+      font-weight: 700;
+    }
+
+    .contact-card {
+      display: grid;
+      gap: 7px;
+      margin-top: 13px;
+      padding: 16px;
+      border: 1px solid rgba(46, 170, 154, 0.24);
+      border-radius: 14px;
+      background: var(--aqua-soft);
+    }
+
+    .contact-card strong {
+      color: #214953;
+    }
+
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+      padding: 24px 2px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: static;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .page {
+        width: min(100% - 24px, 1160px);
+        padding-top: 12px;
+      }
+
+      .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: stretch;
+      }
+
+      .nav-links a {
+        flex: 1;
+      }
+
+      .hero-copy,
+      .summary-card,
+      .policy-section {
+        padding: 21px;
+      }
+
+      h1 {
+        font-size: clamp(2.4rem, 14vw, 3.7rem);
+      }
+
+      footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media (prefers-contrast: more) {
+      :root {
+        --muted: #314f58;
+        --border: rgba(24, 78, 91, 0.5);
+      }
+
+      .glass-card,
+      .policy-section,
+      .toc {
+        background: #fff;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .site-header,
+      .toc,
+      footer,
+      .skip-link {
+        display: none;
+      }
+
+      .page {
+        width: 100%;
+        padding: 0;
+      }
+
+      .hero,
+      .layout {
+        display: block;
+      }
+
+      .summary-card {
+        margin-top: 12px;
+      }
+
+      .glass-card,
+      .policy-section {
+        margin-bottom: 12px;
+        border: 1px solid #b8c8cd;
+        background: #fff;
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  <main class="page" id="contenuto">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="NeoScreen Hub, pagina iniziale">
+        <span class="brand-mark">
+          <span class="brand-fallback" aria-hidden="true">NS</span>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">NeoScreen Hub</span>
+          <span class="brand-subtitle">Medical Data Intelligence</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="download.html">Scarica</a>
+        <a class="active" href="privacy.html" aria-current="page">Privacy</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="privacy-title">
+      <div class="hero-copy glass-card">
+        <div class="eyebrow">Trasparenza · Controllo · Sicurezza</div>
+        <h1 id="privacy-title">Privacy Policy</h1>
+        <p class="lead">
+          Questa informativa descrive come il sito e l'applicazione desktop
+          NeoScreen Hub trattano i dati, con particolare attenzione ai dati
+          sanitari conservati localmente e all'integrazione opzionale con
+          Google Drive.
+        </p>
+        <span class="updated">Ultimo aggiornamento: 7 settembre 2026</span>
+      </div>
+
+      <aside class="summary-card glass-card" aria-label="Privacy in sintesi">
+        <div class="summary-item">
+          <strong>Offline-first</strong>
+          <span>I dati clinici restano nel Database SQLCipher del laboratorio.</span>
+        </div>
+        <div class="summary-item">
+          <strong>Nessuna pubblicità o profilazione</strong>
+          <span>Il sito non integra analytics, pixel pubblicitari o cookie di profilazione.</span>
+        </div>
+        <div class="summary-item">
+          <strong>Google Drive facoltativo</strong>
+          <span>Solo backup cifrati, previa configurazione e consenso OAuth espliciti.</span>
+        </div>
+      </aside>
+    </section>
+
+    <div class="layout">
+      <nav class="toc" aria-label="Indice della Privacy Policy">
+        <h2>Indice</h2>
+        <ol>
+          <li><a href="#ambito">Ambito</a></li>
+          <li><a href="#ruoli">Ruoli privacy</a></li>
+          <li><a href="#sito">Sito e download</a></li>
+          <li><a href="#app">Applicazione desktop</a></li>
+          <li><a href="#google">Dati Google</a></li>
+          <li><a href="#finalita">Finalità e basi giuridiche</a></li>
+          <li><a href="#conservazione">Conservazione e cancellazione</a></li>
+          <li><a href="#sicurezza">Sicurezza</a></li>
+          <li><a href="#destinatari">Destinatari e trasferimenti</a></li>
+          <li><a href="#diritti">Diritti</a></li>
+          <li><a href="#minori">Dati dei minori</a></li>
+          <li><a href="#modifiche">Modifiche e contatti</a></li>
+        </ol>
+      </nav>
+
+      <article class="policy-content">
+        <section class="policy-section" id="ambito">
+          <h2><span class="section-number" aria-hidden="true">01</span>Ambito dell'informativa</h2>
+          <p>
+            La presente Privacy Policy si applica al sito pubblico
+            <strong>neoscreenhub.velodent.eu</strong> e al software desktop
+            <strong>NeoScreen Hub</strong>. Descrive i trattamenti effettuati
+            direttamente dal gestore del sito e chiarisce il diverso ruolo del
+            laboratorio che installa e utilizza l'applicazione.
+          </p>
+          <p>
+            Il sito presenta il prodotto e consente di raggiungere il pacchetto
+            dell'ultima release. NeoScreen Hub è invece un'applicazione Windows
+            locale destinata a organizzazioni sanitarie autorizzate per
+            importazione, controllo qualità, consultazione, workflow clinici,
+            audit e backup cifrato.
+          </p>
+        </section>
+
+        <section class="policy-section" id="ruoli">
+          <h2><span class="section-number" aria-hidden="true">02</span>Ruoli e responsabilità privacy</h2>
+          <h3>Sito e rapporti diretti</h3>
+          <p>
+            Il gestore del sito e referente privacy del prodotto è
+            <strong>Velodent</strong>. Le richieste possono essere inviate a
+            <a href="mailto:velodent@hotmail.com">velodent@hotmail.com</a>.
+          </p>
+          <h3>Dati trattati dal laboratorio</h3>
+          <p>
+            L'organizzazione sanitaria che installa NeoScreen Hub determina
+            finalità, basi giuridiche, tempi di conservazione, autorizzazioni e
+            procedure applicabili ai dati di pazienti e operatori. Tale
+            organizzazione agisce normalmente come titolare del trattamento e
+            deve fornire agli interessati la propria informativa istituzionale.
+          </p>
+          <p>
+            NeoScreen Hub non trasferisce automaticamente al fornitore i dati
+            clinici presenti nel Database locale. Eventuali attività di
+            assistenza che comportino accesso a dati reali richiedono un
+            accordo e istruzioni documentate dell'organizzazione interessata.
+          </p>
+          <div class="notice warning">
+            Per richieste relative a un risultato clinico o ai dati di un
+            paziente occorre contattare direttamente il laboratorio o la
+            struttura sanitaria che ha eseguito l'esame. Non inviare dati
+            sanitari o identificativi del paziente all'indirizzo di supporto.
+          </div>
+        </section>
+
+        <section class="policy-section" id="sito">
+          <h2><span class="section-number" aria-hidden="true">03</span>Dati trattati dal sito e dalla pagina download</h2>
+          <div class="data-table-wrap" role="region" aria-label="Tabella dei dati trattati dal sito" tabindex="0">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Categoria</th>
+                  <th>Quando</th>
+                  <th>Uso</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Dati tecnici di rete</td>
+                  <td>Visita delle pagine ospitate</td>
+                  <td>Erogazione, sicurezza e diagnostica tecnica del servizio di hosting.</td>
+                </tr>
+                <tr>
+                  <td>Richieste alla GitHub API</td>
+                  <td>Apertura della pagina download</td>
+                  <td>Individuazione dell'asset ZIP dell'ultima release disponibile.</td>
+                </tr>
+                <tr>
+                  <td>Messaggi e indirizzo e-mail</td>
+                  <td>Contatto volontario del supporto</td>
+                  <td>Risposta alla richiesta, sicurezza e continuità del rapporto.</td>
+                </tr>
+                <tr>
+                  <td>Password della pagina download</td>
+                  <td>Inserimento volontario nel browser</td>
+                  <td>Verifica locale nella pagina; non viene inviata o conservata dal sito.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Il codice delle pagine non imposta cookie, non integra strumenti di
+            analytics, pixel pubblicitari, social plug-in o profilazione. Il
+            fornitore di hosting e GitHub possono comunque ricevere normali
+            informazioni tecniche, come indirizzo IP, user agent, data e ora,
+            secondo le rispettive condizioni e informative.
+          </p>
+        </section>
+
+        <section class="policy-section" id="app">
+          <h2><span class="section-number" aria-hidden="true">04</span>Dati trattati dall'applicazione desktop</h2>
+          <p>
+            In base alla configurazione e ai file importati dal laboratorio,
+            NeoScreen Hub può trattare dati anagrafici, dati sanitari e
+            biometrici non utilizzati per identificazione, identificativi
+            tecnici di campione, risultati analitici, dati dei genitori,
+            informazioni su controlli qualità, decisioni cliniche, account
+            locali degli operatori e audit delle operazioni.
+          </p>
+          <ul>
+            <li>Il Database autoritativo è locale e cifrato tramite SQLCipher.</li>
+            <li>L'accesso richiede credenziali locali e autorizzazioni basate sul ruolo.</li>
+            <li>Le chiavi operative sono protette mediante meccanismi Windows e Master Recovery Key.</li>
+            <li>I CSV selezionati vengono letti in sola lettura e non sono caricati sul sito.</li>
+            <li>I log tecnici sono progettati per escludere dati personali, segreti e valori clinici.</li>
+            <li>Il controllo aggiornamenti è manuale e consulta esclusivamente la release GitHub pubblica.</li>
+          </ul>
+          <p>
+            NeoScreen Hub non usa i dati sanitari per pubblicità, profilazione
+            commerciale, vendita, addestramento di modelli di intelligenza
+            artificiale o finalità proprie del fornitore.
+          </p>
+        </section>
+
+        <section class="policy-section" id="google">
+          <h2><span class="section-number" aria-hidden="true">05</span>Google Drive e dati utente Google</h2>
+          <p>
+            L'integrazione Google Drive è <strong>facoltativa e disattivata per
+            impostazione predefinita</strong>. Non avviene alcun accesso a dati
+            Google finché un Admin non configura il client istituzionale, indica
+            una cartella e completa volontariamente il consenso OAuth nel
+            browser di sistema.
+          </p>
+          <h3>Dati a cui l'applicazione accede</h3>
+          <ul>
+            <li>autorizzazione OAuth e token necessari alla sessione Drive;</li>
+            <li>identificatore e metadati tecnici della cartella autorizzata;</li>
+            <li>nomi, dimensioni, identificativi e metadati dei backup NeoScreen Hub accessibili all'app;</li>
+            <li>contenuto dei soli pacchetti di backup cifrati caricati o selezionati per il ripristino.</li>
+          </ul>
+          <p>
+            L'app richiede lo scope minimo
+            <code>https://www.googleapis.com/auth/drive.file</code>, che limita
+            l'accesso ai file creati dall'applicazione o esplicitamente messi a
+            sua disposizione. NeoScreen Hub non richiede accesso generale a
+            tutti i documenti personali presenti su Google Drive.
+          </p>
+          <h3>Come vengono usati i dati Google</h3>
+          <p>
+            I dati sono usati esclusivamente per creare e trasferire Recovery
+            Set cifrati, mostrare lo storico tecnico dei backup, individuare il
+            backup compatibile più recente e ripristinarlo dopo verifica. Non
+            vengono usati per pubblicità, profilazione, analisi commerciale,
+            vendita o addestramento di modelli.
+          </p>
+          <h3>Conservazione e protezione</h3>
+          <ul>
+            <li>I token OAuth sono protetti localmente con Windows DPAPI.</li>
+            <li>I token non entrano nel Database clinico, nei log o nei pacchetti di backup.</li>
+            <li>MRK e DEK in chiaro non vengono caricate su Google Drive.</li>
+            <li>I backup hanno nomi tecnici privi di dati di pazienti e operatori.</li>
+            <li>Il pacchetto remoto è cifrato e autenticato prima del trasferimento.</li>
+          </ul>
+          <h3>Condivisione, revoca e cancellazione</h3>
+          <p>
+            I dati Google non vengono condivisi con soggetti diversi da Google
+            per fornire la funzione Drive richiesta dall'utente, salvo obblighi
+            di legge o istruzioni documentate dell'organizzazione titolare. Il
+            titolare può revocare l'accesso dalla pagina delle autorizzazioni del
+            proprio Account Google e cancellare i pacchetti dalla cartella Drive.
+            La revoca impedisce nuovi accessi; per rimuovere anche la
+            configurazione locale occorre seguire la procedura amministrativa
+            prevista dall'applicazione o dall'organizzazione.
+          </p>
+          <div class="notice">
+            L'uso e il trasferimento ad altre applicazioni delle informazioni
+            ricevute dalle API Google rispettano la
+            <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google API Services User Data Policy</a>,
+            inclusi i requisiti di Limited Use. L'accesso resta limitato alla
+            funzione di backup e ripristino scelta dall'utente.
+          </div>
+        </section>
+
+        <section class="policy-section" id="finalita">
+          <h2><span class="section-number" aria-hidden="true">06</span>Finalità e basi giuridiche</h2>
+          <p>
+            Per il sito, i dati tecnici strettamente necessari sono trattati per
+            erogare e proteggere il servizio; le comunicazioni volontarie sono
+            trattate per rispondere alla richiesta e gestire il rapporto. Le
+            basi giuridiche applicabili possono includere esecuzione di misure
+            precontrattuali o contrattuali, adempimento di obblighi di legge e
+            legittimo interesse alla sicurezza e continuità del servizio.
+          </p>
+          <p>
+            Per i dati sanitari e degli operatori trattati nell'applicazione, la
+            struttura sanitaria individua e documenta le basi giuridiche ai
+            sensi della normativa applicabile, incluse le condizioni specifiche
+            previste per le categorie particolari di dati. Il consenso OAuth a
+            Google autorizza tecnicamente l'accesso richiesto, ma non sostituisce
+            la base giuridica che l'organizzazione deve individuare per il
+            proprio trattamento e backup.
+          </p>
+        </section>
+
+        <section class="policy-section" id="conservazione">
+          <h2><span class="section-number" aria-hidden="true">07</span>Conservazione e cancellazione</h2>
+          <ul>
+            <li>I messaggi di supporto sono conservati per il tempo necessario a gestire la richiesta e gli eventuali obblighi connessi.</li>
+            <li>I dati tecnici di hosting e GitHub seguono i periodi stabiliti dai rispettivi fornitori.</li>
+            <li>I dati clinici locali seguono il piano di conservazione e gli obblighi legali definiti dalla struttura sanitaria.</li>
+            <li>I backup Drive restano nella cartella scelta finché il titolare non li rimuove secondo la propria policy.</li>
+            <li>I token OAuth restano utilizzabili fino a revoca, scadenza, disconnessione o perdita della protezione DPAPI.</li>
+          </ul>
+          <p>
+            Disinstallare l'applicazione non elimina automaticamente il Data
+            Root clinico: questa scelta evita perdite accidentali durante
+            aggiornamenti o reinstallazioni. La cancellazione definitiva deve
+            essere una procedura amministrativa deliberata, autorizzata e
+            compatibile con gli obblighi di conservazione sanitaria.
+          </p>
+        </section>
+
+        <section class="policy-section" id="sicurezza">
+          <h2><span class="section-number" aria-hidden="true">08</span>Misure di sicurezza</h2>
+          <p>
+            NeoScreen Hub adotta misure tecniche progettate per ridurre i rischi
+            di accesso non autorizzato, perdita, alterazione e divulgazione:
+            cifratura SQLCipher, credenziali locali, RBAC, audit, chiavi protette
+            da DPAPI, Recovery Set autenticati, backup cifrati, OAuth 2.0 con
+            PKCE, minimizzazione dei log e validazione fail-closed.
+          </p>
+          <p>
+            Nessun sistema può garantire sicurezza assoluta. L'organizzazione
+            deve proteggere dispositivi, account Windows e Google, MRK, supporti
+            di backup e rete; applicare aggiornamenti; limitare gli accessi;
+            verificare i restore e gestire gli incidenti secondo le proprie
+            procedure istituzionali.
+          </p>
+        </section>
+
+        <section class="policy-section" id="destinatari">
+          <h2><span class="section-number" aria-hidden="true">09</span>Destinatari e trasferimenti</h2>
+          <p>I dati possono essere trattati, nei limiti necessari, da:</p>
+          <ul>
+            <li>personale autorizzato del laboratorio che utilizza NeoScreen Hub;</li>
+            <li>fornitore del servizio di hosting delle pagine pubbliche;</li>
+            <li>GitHub, per hosting/download e controllo manuale delle release;</li>
+            <li>Google, esclusivamente quando viene attivata l'integrazione Drive;</li>
+            <li>fornitori o autorità legittimati in base a legge, contratto e istruzioni documentate.</li>
+          </ul>
+          <p>
+            GitHub e Google possono trattare informazioni tecniche anche fuori
+            dallo Spazio Economico Europeo secondo i propri termini, misure e
+            meccanismi di trasferimento. L'organizzazione sanitaria deve
+            valutare e configurare i servizi cloud in conformità alle proprie
+            responsabilità e policy istituzionali.
+          </p>
+          <p>
+            Approfondimenti:
+            <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">privacy GitHub</a>
+            e
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">privacy Google</a>.
+          </p>
+        </section>
+
+        <section class="policy-section" id="diritti">
+          <h2><span class="section-number" aria-hidden="true">10</span>Diritti degli interessati</h2>
+          <p>
+            Nei limiti e alle condizioni previste dal Regolamento (UE) 2016/679
+            e dalla normativa applicabile, l'interessato può richiedere accesso,
+            rettifica, cancellazione, limitazione, portabilità, opposizione e
+            revoca del consenso quando pertinente, senza pregiudicare la liceità
+            del trattamento precedente.
+          </p>
+          <p>
+            Le richieste sui dati clinici devono essere rivolte al laboratorio
+            o alla struttura sanitaria titolare. Per dati relativi al sito o a
+            comunicazioni dirette è possibile contattare
+            <a href="mailto:velodent@hotmail.com">velodent@hotmail.com</a>.
+            L'interessato può inoltre proporre reclamo all'autorità di controllo
+            competente; in Italia, il
+            <a href="https://www.garanteprivacy.it/" target="_blank" rel="noopener noreferrer">Garante per la protezione dei dati personali</a>.
+          </p>
+        </section>
+
+        <section class="policy-section" id="minori">
+          <h2><span class="section-number" aria-hidden="true">11</span>Dati dei minori</h2>
+          <p>
+            Il sito non è destinato a raccogliere direttamente dati da minori.
+            L'applicazione può trattare dati sanitari neonatali esclusivamente
+            nell'ambito delle attività professionali della struttura sanitaria,
+            sotto la sua responsabilità e con le garanzie previste dalla legge.
+            Il fornitore non utilizza tali dati per rivolgersi commercialmente a
+            minori o famiglie.
+          </p>
+        </section>
+
+        <section class="policy-section" id="modifiche">
+          <h2><span class="section-number" aria-hidden="true">12</span>Modifiche, versioni e contatti</h2>
+          <p>
+            Questa informativa può essere aggiornata quando cambiano il
+            prodotto, i fornitori, la normativa o le modalità d'uso dei dati.
+            La data in alto identifica la versione pubblicata. Se una modifica
+            incide materialmente sui dati Google o introduce una nuova finalità,
+            l'informativa e le comunicazioni interne all'applicazione saranno
+            aggiornate prima del nuovo trattamento e, quando necessario, verrà
+            richiesto un nuovo consenso.
+          </p>
+          <div class="contact-card">
+            <strong>NeoScreen Hub — Velodent</strong>
+            <span>Contatto privacy e supporto:</span>
+            <a href="mailto:velodent@hotmail.com">velodent@hotmail.com</a>
+            <span>Sito: <a href="https://neoscreenhub.velodent.eu/">neoscreenhub.velodent.eu</a></span>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <footer>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="download.html">Scarica</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+      </div>
+      <div>Contatto privacy: <a href="mailto:velodent@hotmail.com">velodent@hotmail.com</a></div>
+    </footer>
+  </main>
+</body>
+</html>
